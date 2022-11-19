@@ -1,11 +1,38 @@
-/*
-Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
-https://github.com/orioncactus/pretendard
-
-This Font Software is licensed under the SIL Open Font License, Version 1.1.
-This license is copied below, and is also available with a FAQ at:
-http://scripts.sil.org/OFL
-*/
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Noto Sans KR'),
+      url('./webfont/NotoSans-Light.woff2') format("woff2");
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 350;
+  src: local('Noto Sans KR'),
+      url('./webfont/NotoSans-DemiLight.woff2') format("woff2");
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Sans KR'),
+      url('./webfont/NotoSans-Regular.woff2') format("woff2");
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Noto Sans KR'),
+      url('./webfont/NotoSans-Medium.woff2') format("woff2");
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Sans KR'), 
+      url('./webfont/NotoSans-Bold.woff2') format("woff2");
+}
 
 @font-face {
 	font-family: 'Pretendard';
