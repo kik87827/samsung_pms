@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('./include/head.html')
+<body class="front_body">
+    <div class="page_wrap">
+        @@include('./include/header.html')
+        <section class="middle_wrap">
+            <div class="middle_copy_row"><p class="middle_main_copy">PMS Dashboard system에 오신걸 환영합니다</p></div>
+            <div class="card_layout">
+                <div class="card_row">
+                    <div class="card_long box_render flex_type">
+                        <div class="card_title_cols">
+                            <p class="card_main_title">Toll Gate</p>
+                            <div class="card_main_icon"></div>
+                        </div>
+                        <div class="card_data_cols">
+                            <div class="card_chart_render_cols">
+                                <!-- chart 영역 -->
+                                <div class="chart_render">
+                                    <img src="./images/temp_chart.png" alt="">
+                                    <div class="chart_dev_guide">chart zone</div>
+                                </div>
+                                <!-- // chart 영역 --> 
+                            </div>
+                            <div class="card_chart_guide_cols">
+                                <ul class="chart_guide_list">
+                                    <li>
+                                        <span class="chart_guide_label">개발과제</span>
+                                        <div class="chart_bar_wrap">
+                                            <div class="chart_bar_current" style="background-color:#2382d2; width:100%">
+                                                <span class="bar_value_group">
+                                                    <span class="bar_value">100</span>
+                                                    <span class="bar_unit">%</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="chart_guide_label">개선과제</span>
+                                        <div class="chart_bar_wrap">
+                                            <div class="chart_bar_current" style="background-color:#66abdc; width:23.4%">
+                                                <span class="bar_value_group">
+                                                    <span class="bar_value">23.4</span>
+                                                    <span class="bar_unit">%</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <span class="chart_guide_label">파생과제</span>
+                                        <div class="chart_bar_wrap">
+                                            <div class="chart_bar_current" style="background-color:#badeef; width:15.0%">
+                                                <span class="bar_value_group">
+                                                    <span class="bar_value">15.0</span>
+                                                    <span class="bar_unit">%</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_short box_render">
+                        <div class="card_title_row"><p class="card_title">Upcoming Events</p></div>
+                        <div class="card_content_row">
+                            <div class="getdata_zone">
+                                <div class="ico_data"></div>
+                                <ul class="getdata_list">
+                                    <li class="nodata_li"><p class="nodata_para">데이터가 없습니다.</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card_row">
+                    <div class="card_long box_render">
+                        <div class="table_title_row">
+                            <div class="table_title_cols"><p class="table_title ico_data"><span class="table_title_text">Projects</span></p></div>
+                            <div class="table_title_cols"><a href="#" class="btn_box ico_link"><span class="btn_box_intext">Compare</span></a></div>
+                        </div>
+                        <div class="table_content_row">
+                            <div class="data_table_zone" id="data_table_project" data-row="13">
+                                <style>
+                                    #data_table_project .wid_01{width:10%;}
+                                    #data_table_project .wid_01_01{width:5%;}
+                                    #data_table_project .wid_01_02{width:5%;}
+                                    #data_table_project .wid_02{}
+                                    #data_table_project .wid_03{width:10%;}
+                                    #data_table_project .wid_04{width:10%;}
+                                    #data_table_project .wid_05{width:14%;}
+                                    #data_table_project .wid_06{width:10%;}
+                                    #data_table_project .wid_07{width:10%;}
+                                </style>
+                                <div class="data_thead_row">
+                                    <table class="data_thead_tb">
+                                        <tr>
+                                            <th class="wid_01"><span class="th_text">Program</span></th>
+                                            <th class="wid_02">
+                                                <div class="th_value_group">
+                                                    <span class="th_text">WBS Lv1</span>
+                                                    <span class="th_unit">Estimate End Date</span>
+                                                </div>
+                                            </th>
+                                            <th class="wid_03">
+                                                <div class="th_value_group">
+                                                    <span class="th_text">Risk</span>
+                                                    <span class="th_unit">(DTD)</span>
+                                                </div>
+                                            </th>
+                                            <th class="wid_04">
+                                                <div class="th_value_group">
+                                                    <span class="th_text">Issue</span>
+                                                    <span class="th_unit">(DTD)</span>
+                                                </div>
+                                            </th>
+                                            <th class="wid_05">
+                                                <div class="th_value_group">
+                                                    <span class="th_text">Cost</span>
+                                                    <span class="th_unit emp">백만원</span>
+                                                    <span class="th_unit">(DTD)</span>
+                                                </div>
+                                            </th>
+                                            <th class="wid_06">
+                                                <div class="th_value_group">
+                                                    <span class="th_text">MH</span>
+                                                    <span class="th_unit emp">FTE</span>
+                                                    <span class="th_unit">(DTD)</span>
+                                                </div>
+                                            </th>
+                                            <th class="wid_07">
+                                                <div class="th_value_group">
+                                                    <span class="th_text">Output</span>
+                                                    <span class="th_unit">(DTD)</span>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="data_tbody_row">
+                                    <table class="data_tbody_tb">
+                                        <tr class="nodata_tr">
+                                            <td class="nodata_td" colspan="7"><p class="nodata_para">데이터가 없습니다.</p></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card_short has_vitem">
+                        <div class="card_vitem box_render">
+                            <div class="chart_summary_both">
+                                <div class="chart_summary_title_cols">
+                                    <p class="chart_summary_title">Risk</p>
+                                    <a href="#" class="summary_main_item">
+                                        <div class="summary_main_ico"></div>
+                                        <div class="summary_main_tail_group">
+                                            <p class="summary_tail_label">UPD NOV-01</p>
+                                            <div class="summary_value_group">
+                                                <div class="summary_value_main">15</div>
+                                                <div class="get_rank_g">
+                                                    <span class="get_rank_value">1</span>
+                                                    <span class="get_rank_ico down"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="chart_summary_content_cols">
+                                    <div class="get_count_group">
+                                        <span class="get_count_item">
+                                            <span class="get_count_label">Total</span>
+                                            <span class="get_count_value">55</span>
+                                        </span>
+                                        <span class="get_count_item">
+                                            <span class="get_count_label">Solved</span>
+                                            <span class="get_count_value">38</span>
+                                        </span>
+                                    </div>
+                                    <!-- chart 영역 -->
+                                    <div class="chart_render">
+                                        <img src="./images/temp_graph_01.png" alt="">
+                                        <div class="chart_dev_guide">chart zone</div>
+                                    </div>
+                                    <!-- // chart 영역 -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card_vitem box_render">
+                            <div class="chart_summary_both">
+                                <div class="chart_summary_title_cols">
+                                    <p class="chart_summary_title">Issue</p>
+                                    <a href="#" class="summary_main_item type2">
+                                        <div class="summary_main_ico"></div>
+                                        <div class="summary_main_tail_group">
+                                            <p class="summary_tail_label">UPD NOV-01</p>
+                                            <div class="summary_value_group">
+                                                <div class="summary_value_main">15</div>
+                                                <div class="get_rank_g">
+                                                    <span class="get_rank_value">11</span>
+                                                    <span class="get_rank_ico up"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="chart_summary_content_cols">
+                                    <div class="get_count_group">
+                                        <span class="get_count_item">
+                                            <span class="get_count_label">Total</span>
+                                            <span class="get_count_value">55</span>
+                                        </span>
+                                        <span class="get_count_item">
+                                            <span class="get_count_label">Solved</span>
+                                            <span class="get_count_value">38</span>
+                                        </span>
+                                    </div>
+                                    <!-- chart 영역 -->
+                                    <div class="chart_render">
+                                        <img src="./images/temp_graph_02.png" alt="">
+                                        <div class="chart_dev_guide">chart zone</div>
+                                    </div>
+                                    <!-- // chart 영역 -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card_vitem box_render">
+                            <div class="chart_summary_both type2">
+                                <div class="chart_summary_title_cols">
+                                    <p class="chart_summary_title">Cost</p>
+                                    <div class="chart_summary_sub_group">
+                                        <div class="summary_sub_item">
+                                            <div class="get_price_item_group">
+                                                <span class="get_price_main define_plus">+15,000</span>
+                                                <span class="get_price_unit">백만원</span>
+                                            </div>
+                                            <div class="get_price_copy">MTM NOV. Compared to OCT.</div>
+                                        </div>
+                                        <div class="summary_sub_item">
+                                            <div class="get_price_item_group">
+                                                <span class="get_price_main define_minus">-2,500</span>
+                                            </div>
+                                            <div class="get_price_copy">MTM NOV. Compared to last NOV.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chart_summary_content_cols">
+                                    <!-- chart 영역 -->
+                                    <div class="chart_render">
+                                        <img src="./images/temp_graph_03.png" alt="">
+                                        <div class="chart_dev_guide">chart zone</div>
+                                    </div>
+                                    <!-- // chart 영역 -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card_vitem box_render">
+                            <div class="chart_summary_both type2">
+                                <div class="chart_summary_title_cols">
+                                    <div class="chart_summary_title_group">
+                                        <p class="chart_summary_title">MH</p>
+                                        <span class="chart_summary_title_sub">FTE</span>
+                                    </div>
+                                    <div class="chart_summary_sub_group">
+                                        <div class="summary_sub_item">
+                                           <p class="summary_main_value">280</p>
+                                           <p class="summary_main_value_guide">UPD NOV-01</p>
+                                        </div>
+                                        <div class="summary_sub_item">
+                                           <p class="summary_sub_value">20</p>
+                                           <div class="get_price_copy">MTM NOV. Compared to last NOV.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chart_summary_content_cols">
+                                    <!-- chart 영역 -->
+                                    <div class="chart_render">
+                                        <img src="./images/temp_graph_04.png" alt="">
+                                        <div class="chart_dev_guide">chart zone</div>
+                                    </div>
+                                    <!-- // chart 영역 -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    @@include('./include/script.html')
+    <script>
+        window.addEventListener("load",()=>{
+            dataTableFunc.drawCallBack("#data_table_project");
+        });
+    </script>
+</body>
+</html>      

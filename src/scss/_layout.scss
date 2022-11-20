@@ -1,13 +1,20 @@
-.front_body{}
+::-webkit-scrollbar {width: 10px;background-color:transparent;}
+::-webkit-scrollbar-thumb {background-color: #ccc;border-radius: 10px;background-clip: padding-box;border: 2px solid transparent;}
+::-webkit-scrollbar-track {background-color: transparent;border-radius: 10px;box-shadow: inset 0px 0px 5px transparent;}
+
+.front_body{position:relative;overflow-x:hidden;background:#eff5f8;min-height:100vh;}
 .page_wrap{}
-.header_wrap{}
-.toplogo_title{}
-.toplogo_item{}
-.toplogo_img{
-    > img{}
+.header_wrap{display:flex;justify-content:space-between;align-items:center;height:54px;padding:0 24px;border-radius:0 17px 0 17px;box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.13);position:relative;background:#2f82e2 url("../images/bg_header.png") no-repeat 100% 0;
+    > *{position:relative;z-index:1;}
 }
-.toplogo_text{}
-.header_copy{}
-.middle_wrap{}
-.middle_copy_row{}
-.middle_main_copy{}
+.toplogo_title{display:inline-block;font-size:0;line-height:0;}
+.toplogo_item{display:inline-flex;align-items:center}
+.toplogo_img{
+    display:inline-block;
+    > img{vertical-align: middle;}
+}
+.toplogo_text{color:#fff;font-family: 'Open Sans SemiBold';font-size:20px;display:inline-block;line-height:1;margin-left:10px;}
+.header_copy{color:#fff;font-family: 'Open Sans SemiBold';font-size:18px;display:inline-block;line-height:1;}
+.middle_wrap{padding:0 24px;}
+.middle_copy_row{padding:15px 0;}
+.middle_main_copy{font-size: 13px;color: rgb(78, 78, 78);line-height: 1;}
