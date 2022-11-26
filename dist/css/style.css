@@ -467,6 +467,16 @@ textarea {
   background: #ececec;
 }
 
+.bg_grid_unit_line {
+  position: relative;
+  top: 1.5px;
+}
+
+.bg_grid_unit_line:first-of-type,
+.bg_grid_unit_line:last-of-type {
+  top: 0;
+}
+
 .bg_grid_unit_line_wrap:before {
   display: block;
   content: "";
