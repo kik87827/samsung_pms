@@ -1051,16 +1051,34 @@ textarea {
 }
 
 .get_value_group_wrap {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  padding: 0 20px 0 0;
 }
 .get_value_group_wrap .get_value_group {
-  padding-left: 0;
   margin-right: 10px;
+  padding: 0;
 }
 .get_value_group_wrap .get_value_group:last-of-type {
   margin-right: 0;
+}
+.get_value_group_wrap .get_value_group:after {
+  display: none !important;
+}
+.get_value_group_wrap.ico_new:after {
+  display: block;
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: url("../images/icon_new.png") no-repeat 50% 50%;
+  border: 1px solid #e54242;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
 }
 
 .get_value_group {
