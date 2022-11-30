@@ -205,23 +205,29 @@
                     <div class="card_long box_render">
                         <div class="table_title_row">
                             <div class="table_title_cols"><p class="table_title ico_data"><span class="table_title_text">Projects</span></p></div>
-                            <div class="table_title_cols"><a href="#" class="btn_box ico_link"><span class="btn_box_intext">Compare</span></a></div>
+                            <div class="table_title_cols">
+                                <!-- 221130 변경 -->
+                                <a href="#" class="btn_textonly ico_link"><span class="btn_textonly_intext">Compare</span></a>
+                                <!-- // 221130 변경 -->
+                            </div>
                         </div>
                         <div class="table_content_row">
                             <div class="data_table_zone" id="data_table_project" data-row="13">
+                                <!-- 221130 변경 -->
                                 <!-- 221128 변경 -->
                                 <style>
                                     #data_table_project .wid_01{width:9%;}
                                     #data_table_project .wid_01_01{width:4%;}
                                     #data_table_project .wid_01_02{width:5%;}
                                     #data_table_project .wid_02{}
-                                    #data_table_project .wid_03{width:14%;}
-                                    #data_table_project .wid_04{width:14%;}
+                                    #data_table_project .wid_03{width:16%;}
+                                    #data_table_project .wid_04{width:16%;}
                                     #data_table_project .wid_05{width:12.5%;}
                                     #data_table_project .wid_06{width:9%;}
-                                    #data_table_project .wid_07{width:9.5%;}
+                                    #data_table_project .wid_07{width:12%;}
                                 </style>
                                 <!-- // 221128 변경 -->
+                                <!-- // 221130 변경 -->
                                 <div class="data_thead_row">
                                     <table class="data_thead_tb">
                                         <tr>
@@ -307,16 +313,53 @@
                                             <span class="get_count_value">38</span>
                                         </span>
                                     </div>
-                                    <!-- chart 영역 -->
-                                    <div class="chart_render">
-                                        <img src="./images/temp_graph_01.png" alt="">
-                                        <div class="chart_dev_guide">chart zone</div>
+                                    <!-- 221125 변경 -->
+                                    <div class="get_summary_tb_wrap">
+                                        <table class="get_summary_tb">
+                                            <!-- 221130 변경 -->
+                                            <tr class="nodata_tr">
+                                                <td colspan="3">
+                                                    <p class="nodata_para">데이터가 없습니다.</p>
+                                                </td>
+                                            </tr>
+                                            <!-- // 221130 변경 -->
+                                            <!-- <tr>
+                                                <td><span class="ico_text ico_calendar">Dec. 21</span></td>
+                                                <td><span class="summary_td_text">SB08</span></td>
+                                                <td class="type2">
+                                                    <div class="td_link_group">
+                                                        <a href="#" class="summary_td_link">Cell Line Development</a>
+                                                        <span class="emp_message_box">중요</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="ico_text ico_calendar">Dec. 21</span></td>
+                                                <td><span class="summary_td_text">SB08</span></td>
+                                                 <td class="type2">
+                                                    <div class="td_link_group">
+                                                        <a href="#" class="summary_td_link">Process Performance</a>
+                                                        <span class="emp_message_box">중요</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="ico_text ico_calendar">Dec. 21</span></td>
+                                                <td><span class="summary_td_text">SB08</span></td>
+                                                 <td class="type2">
+                                                    <div class="td_link_group">
+                                                        <a href="#" class="summary_td_link">Submission</a>
+                                                    </div>
+                                                </td>
+                                            </tr> -->
+                                        </table>
                                     </div>
-                                    <!-- // chart 영역 -->
+                                    <!-- // 221125 변경 -->
                                 </div>
                             </div>
                         </div>
                         <div class="card_vitem box_render">
+                            <!-- 221125 변경 -->
                             <div class="chart_summary_both">
                                 <div class="chart_summary_title_cols">
                                     <p class="chart_summary_title">Issue</p>
@@ -333,9 +376,7 @@
                                             </div>
                                         </div>
                                     </a>
-                                </div>
-                                <div class="chart_summary_content_cols">
-                                    <div class="get_count_group">
+                                    <div class="get_count_group type2">
                                         <span class="get_count_item">
                                             <span class="get_count_label">Total</span>
                                             <span class="get_count_value">55</span>
@@ -345,14 +386,60 @@
                                             <span class="get_count_value">38</span>
                                         </span>
                                     </div>
-                                    <!-- chart 영역 -->
-                                    <div class="chart_render">
-                                        <img src="./images/temp_graph_02.png" alt="">
-                                        <div class="chart_dev_guide">chart zone</div>
+                                </div>
+                                <div class="chart_summary_content_cols">
+                                    <div class="get_summary_tb_wrap type2">
+                                        <table class="get_summary_tb">
+                                            <!-- 221130 변경 -->
+                                            <tr class="nodata_tr">
+                                                <td colspan="4">
+                                                    <p class="nodata_para">데이터가 없습니다.</p>
+                                                </td>
+                                            </tr>
+                                            <!-- // 221130 변경 -->
+                                            <!-- <tr>
+                                                <td><span class="ico_text ico_calendar">Dec. 21</span></td>
+                                                <td><span class="summary_td_text">SB08</span></td>
+                                                <td class="type2">
+                                                    <div class="td_link_group">
+                                                        <a href="#" class="summary_td_link">Cell Line Development</a>
+                                                        <span class="emp_message_box type2">update</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="ico_text ico_calendar">Dec. 21</span></td>
+                                                <td><span class="summary_td_text">SB08</span></td>
+                                                 <td class="type2">
+                                                    <div class="td_link_group">
+                                                        <a href="#" class="summary_td_link">Process Performance</a>
+                                                        <span class="emp_message_box">중요</span>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="ico_text ico_calendar">Dec. 21</span></td>
+                                                <td><span class="summary_td_text">SB08</span></td>
+                                                 <td class="type2">
+                                                    <div class="td_link_group">
+                                                        <a href="#" class="summary_td_link">Submission</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="ico_text ico_calendar">Dec. 21</span></td>
+                                                <td><span class="summary_td_text">SB08</span></td>
+                                                <td class="type2">
+                                                    <div class="td_link_group">
+                                                        <a href="#" class="summary_td_link">Cell Line Development</a>
+                                                    </div>
+                                                </td>
+                                            </tr> -->
+                                        </table>
                                     </div>
-                                    <!-- // chart 영역 -->
                                 </div>
                             </div>
+                            <!-- // 221125 변경 -->
                         </div>
                         <div class="card_vitem box_render">
                             <div class="chart_summary_both type2">
@@ -362,7 +449,9 @@
                                         <div class="summary_sub_item">
                                             <div class="get_price_item_group">
                                                 <span class="get_price_main define_plus">+15,000</span>
-                                                <span class="get_price_unit">백만원</span>
+                                                <!-- 221125 변경 -->
+                                                <span class="get_price_unit">억</span>
+                                                <!-- // 221125 변경 -->
                                             </div>
                                             <div class="get_price_copy">MTM NOV. Compared to OCT.</div>
                                         </div>
@@ -394,11 +483,13 @@
                                     <div class="chart_summary_sub_group">
                                         <div class="summary_sub_item">
                                            <p class="summary_main_value">280</p>
-                                           <p class="summary_main_value_guide">UPD NOV-01</p>
+                                           <p class="summary_main_value_guide color_red">Nov-01</p>
                                         </div>
                                         <div class="summary_sub_item">
                                            <p class="summary_sub_value">20</p>
-                                           <div class="get_price_copy">MTM NOV. Compared to last NOV.</div>
+                                           <!-- 221130 변경 -->
+                                           <div class="summary_main_value_guide">DTD <span class="color_red">Nov-01</span> Compare to <span class="color_red">Oct-31</span></div>
+                                           <!-- // 221130 변경 -->
                                         </div>
                                     </div>
                                 </div>
