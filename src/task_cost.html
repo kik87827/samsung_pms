@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('./include/head.html')
+<body class="front_body">
+    <div class="page_wrap">
+        @@include('./include/header.html')
+        <section class="middle_wrap">
+             <div class="middle_copy_row"><p class="middle_main_copy">PMS Dashboard system에 오신걸 환영합니다</p></div>
+            <div class="card_layout">
+                <div class="card_row">
+                    <div class="card_long box_render flex_type">
+                        <div class="card_title_cols dtype2 widtype3">
+                            <div class="page_title_wrap ico_type3">
+                                <p class="page_title_sub">project management</p>
+                                <h2 class="page_title">SB11</h2>
+                            </div>
+                            <p class="page_title_else">Stelara Biosimilar 개발 xxxxxxx<br>Infliximab</p>
+                        </div>
+                        <div class="card_data_cols">
+                            <div class="data_tail_spec_wrap type2">
+                                내용이 들어갑니다.<br>
+                                내용이 들어갑니다.<br>
+                                내용이 들어갑니다.<br>
+                                내용이 들어갑니다.<br>
+                                내용이 들어갑니다.<br>
+                                내용이 들어갑니다.<br>
+                                내용이 들어갑니다.<br>
+                                내용이 들어갑니다.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card_row">
+                    <div class="card_long box_render">
+                        <div class="flex_data_item">
+                            <div class="flex_data_long">
+                                <div class="box_item">
+                                    <div class="box_title_row"><h3 class="box_title ico_02"><span class="box_title_text">Cost<span class="box_title_text_sub">억 (MTM)</span></span></h3></div>
+                                    <div class="box_content_row">
+                                        내용이 들어갑니다.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex_data_short">
+                                <!-- chart 영역 -->
+                                <div class="chart_render">
+                                    <img src="./images/temp_task_graph_02.png" alt="">
+                                    <div class="chart_dev_guide">chart zone</div>
+                                </div>
+                                <!-- // chart 영역 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card_row" id="get_data_box">
+                    <div class="card_long box_render">
+                        <div class="box_item type2">
+                           내용이 들어갑니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    @@include('./include/script.html')
+    <script>
+        window.addEventListener("load",()=>{
+           minHeightCard("#get_data_box");
+        });
+    </script>
+</body>
+</html>      

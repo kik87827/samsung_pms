@@ -47,9 +47,9 @@ function getScrollBarWidth() {
 var dataTableFunc = {
     drawCallBack(target){
         var targetObj = document.querySelector(target);
+        if(targetObj ===null){return;}
         var targetObjTr = targetObj.querySelectorAll("tr:not(.nodata_tr)");
         var targetObjTrHasRowspan = null;
-        if(targetObj ===null){return;}
         var thisBodywrap = targetObj.querySelector(".data_tbody_row");
         var optionRow = parseInt(targetObj.getAttribute("data-row"));
         var getPosDom = thisBodywrap.querySelectorAll("tr:not(.nodata_tr)")[optionRow];
@@ -143,3 +143,131 @@ function siblings(t) {
     return e != t;
   });
 }
+
+
+function minHeightCard(items){
+    if(items === undefined){return;}
+    let itemsArray = items.split(",");
+    let itemsArrayDom = document.querySelectorAll(itemsArray);
+
+    function action(){
+        itemsArrayDom.forEach((element)=>{
+            let thisElement = element;
+            thisElement.style.removeProperty('min-height');
+            let thisPos = window.innerHeight - (thisElement.getBoundingClientRect().top) - 6 | 0;
+            thisElement.setAttribute("style",`min-height:${thisPos}px`);
+        });
+    }
+    function bindEvent(){
+        window.addEventListener("resize",()=>{
+            action();
+        });
+    }
+
+    action();
+    bindEvent();
+}
+
+
+let layerPopup = {
+    show(option){
+        var touchIs = "ontouchstart" in window,
+			modal = document.querySelectorAll(".dimlayer_z"),
+			target_obj = option.target,
+			target_dom = null,
+			app_wrap = document.querySelector(".page_wrap"),
+			fullpop_item = null,
+			fullpop_titlow = null,
+			fullpop_contlow = null;
+
+        
+        var domHtml = document.querySelector("html");
+        var domBody = document.querySelector("body");
+       
+        if(target_obj === null){
+            return;
+        }
+        target_dom = document.querySelector(option.target);
+        
+        modal.forEach((element)=>{
+            element.classList.remove("active");
+        })
+        target_dom.classList.add("active");
+        if("beforeCallback" in option){
+            option.beforeCallback();
+        }
+        setTimeout(()=>{
+            target_dom.classList.add("motion");
+        },30);
+        setTimeout(()=>{
+            if("openCallback" in option){
+                option.openCallback();
+            }
+        },530);
+        
+        target_dom.style.minWidth = (1920 - getScrollBarWidth()) + "px";
+        app_wrap.style.zIndex = "0";
+        app_wrap.appendChild(target_dom);
+        heightcheck();
+        if(target_dom.classList.contains("fulltype")){
+            fullpop_titlow = target_dom.querySelector(".fullpop_titlow");
+            fullpop_contlow = target_dom.querySelector(".fullpop_contlow");
+            fullpop_item = target_dom.querySelector(".fullpop_item");
+        }
+       
+        function heightcheck(){
+            if(touchIs){
+                domBody.setAttribute("data-scr", window.pageYOffset);
+                domBody.style.marginTop = -window.pageYOffset+"px";
+                scrollValue = window.pageYOffset;
+                domHtml.classList.add("touchDis");
+            }
+        }
+    },
+    hide(option){
+        var touchIs = "ontouchstart" in window,
+            target_obj = option.target,
+			target_dom = null,
+            app_wrap = document.querySelector(".page_wrap");
+        
+        var domHtml = document.querySelector("html");
+        var domBody = document.querySelector("body");
+
+        
+        if(target_obj !== null || target_obj.length>0){
+            target_dom = document.querySelectorAll(option.target);
+            target_dom.forEach((element)=>{
+                element.classList.remove("motion");
+                setTimeout(()=>{
+                    element.classList.remove("active");
+                },530);
+            })
+            app_wrap.style.removeProperty('z-index');
+            domBody.classList.remove("touchDis");
+            scrollEnd();
+            if("closeCallback" in option){
+                option.closeCallback();
+            }
+            function scrollEnd(){
+                if(touchIs){
+                    domHtml.classList.remove("touchDis");
+                    domBody.style.marginTop = 0;
+                    window.scrollTo(0, parseInt(objThis.domBody.getAttribute("data-scr")));
+                }
+            }
+        }
+    },
+    bindEvent(){
+        var objThis = this;
+        addDynamicEventListener(document.body, 'click', '.btn_layerclose , .closetrigger , .fullpop_dim', function (e) {
+            let thisObj = e.target;
+            let thisObjParent = thisObj.closest(".dimlayer_z");
+            e.preventDefault();
+            objThis.hide({
+                target : "."+thisObjParent.classList[0]
+            });
+        });
+    }
+}
+
+layerPopup.bindEvent();

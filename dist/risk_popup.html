@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1920" />
+	<link rel="stylesheet" href="./css/style.css" />
+	<title></title>
+</head>
+
+<body class="front_body">
+	<div class="page_wrap">
+		<button type="button" class="btn_guide" id="btn_callLayer">레이어 호출</button>
+		<!-- 레이어팝업 -->
+		<div class="dimlayer_z" id="risk_poppup">
+			<div class="fullpop_dim"></div>
+			<div class="fullpop_item">
+				<div class="fullpop_titlow">
+					<h4 class="fullpop_title">Risk 진행 현황</h4>
+				</div>
+				<div class="fullpop_contlow">
+					<div class="fullpop_contlow_in">
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.<br>
+						내용이 들어갑니다.
+					</div>
+				</div>
+				<!-- <div class="btn_fullsubmit_w">
+					<a href="#" class="btn_quadobj dtype2">저장</a>
+					<a href="#" class="btn_quadobj closetrigger">닫기</a>
+				</div> -->
+				<button type="button" class="btn_layerclose"><span class="hdtext">닫기</span></button>
+			</div>
+		</div>
+		<!-- // 레이어팝업 -->
+	</div>
+	<script src="./js/jquery-3.4.1.min.js"></script>
+	<script src="./js/dynamicListener.min.js"></script>
+	<script src="./js/ui.js"></script>
+	<script>
+		document.querySelector("#btn_callLayer").addEventListener("click", (e) => {
+			layerPopup.show({
+				target: "#risk_poppup",
+				openCallback() {
+					console.log('callback')
+				}
+			})
+		});
+		var eventObj = document.createEvent('Event');
+		eventObj.initEvent('click', false, true);
+		document.querySelector("#btn_callLayer").dispatchEvent(eventObj);
+	</script>
+</body>
+
+</html>
