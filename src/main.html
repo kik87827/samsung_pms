@@ -243,24 +243,22 @@
                             </div>
                         </div>
                         <div class="table_content_row">
-                            <div class="data_table_zone" id="data_table_project" data-row="15">
-                                <!-- 221130 변경 -->
-                                <!-- 221128 변경 -->
+                            <div class="data_table_zone" id="data_table_project" data-row="13">
+                                <!-- 221202 변경 -->
                                 <style>
                                     #data_table_project .wid_01{width:9%;}
                                     #data_table_project .wid_01_01{width:4%;}
                                     #data_table_project .wid_01_02{width:5%;}
                                     #data_table_project .wid_02{}
-                                    #data_table_project .wid_03{width:16%;}
-                                    #data_table_project .wid_04{width:16%;}
-                                    #data_table_project .wid_05{width:12.5%;}
-                                    #data_table_project .wid_06{width:9%;}
+                                    #data_table_project .wid_03{width:10.5%;}
+                                    #data_table_project .wid_04{width:10.5%;}
+                                    #data_table_project .wid_05{width:15%;}
+                                    #data_table_project .wid_06{width:11%;}
                                     #data_table_project .wid_07{width:12%;}
                                 </style>
-                                <!-- // 221128 변경 -->
-                                <!-- // 221130 변경 -->
+                                <!-- // 221202 변경 -->
                                 <div class="data_thead_row">
-                                     <!-- 221125 변경 -->
+                                     <!-- 221202 변경 -->
                                     <table class="data_thead_tb">
                                         <tr>
                                             <th class="wid_01"><span class="th_text">Program</span></th>
@@ -270,17 +268,19 @@
                                                     <span class="th_unit">Estimate End Date</span>
                                                 </div>
                                             </th>
-                                            <th class="wid_03">
+                                            <th class="ptype2 wid_03">
                                                 <div class="th_value_group">
                                                     <span class="th_text">Risk</span>
                                                     <span class="th_unit">(WTW)</span>
                                                 </div>
+                                                <div class="th_value_else_group"><span class="th_value_else">(DTD)</span></div>
                                             </th>
-                                            <th class="wid_04">
+                                            <th class="ptype2 wid_04">
                                                 <div class="th_value_group">
                                                     <span class="th_text">Issue</span>
                                                     <span class="th_unit">(WTW)</span>
                                                 </div>
+                                                <div class="th_value_else_group"><span class="th_value_else">(DTD)</span></div>
                                             </th>
                                             <th class="wid_05">
                                                 <div class="th_value_group">
@@ -289,18 +289,18 @@
                                                     <span class="th_unit">(MTM)</span>
                                                 </div>
                                             </th>
-                                            <th class="wid_06">
+                                            <th class="ptype2 wid_06">
                                                 <div class="th_value_group">
                                                     <span class="th_text">MH</span>
-                                                    <span class="th_unit emp">FTE</span>
-                                                    <span class="th_unit">(DTD)</span>
+                                                    <span class="th_unit">FTE</span>
                                                 </div>
+                                                <div class="th_value_else_group"><span class="th_value_else">(DTD)</span></div>
                                             </th>
-                                            <th class="wid_07">
+                                            <th class="ptype2 wid_07">
                                                 <div class="th_value_group">
                                                     <span class="th_text">Output</span>
-                                                    <span class="th_unit">(DTD)</span>
                                                 </div>
+                                                <div class="th_value_else_group"><span class="th_value_else">(DTD)</span></div>
                                             </th>
                                         </tr>
                                     </table>
@@ -462,25 +462,32 @@
                             <div class="chart_summary_both type2">
                                 <div class="chart_summary_title_cols">
                                     <p class="chart_summary_title">Cost</p>
-                                    <div class="chart_summary_sub_group">
-                                        <div class="summary_sub_item">
+                                    <!-- 221202 변경 -->
+                                    <a href="#" class="summary_main_item type3">
+                                        <div class="summary_main_ico"></div>
+                                        <div class="summary_main_tail_group">
                                             <div class="get_price_item_group">
-                                                <span class="get_price_main define_plus">+15,000</span>
-                                                <!-- 221125 변경 -->
-                                                <span class="get_price_unit">억</span>
-                                                <!-- // 221125 변경 -->
+                                                <span class="get_price_main define_plus">600.5</span>
+                                                <span class="get_price_unit">억원</span>
                                             </div>
-                                            <div class="get_price_copy">MTM NOV. Compared to OCT.</div>
-                                        </div>
-                                        <div class="summary_sub_item">
-                                            <div class="get_price_item_group">
-                                                <span class="get_price_main define_minus">-2,500</span>
+                                            <p class="get_price_copy">UPD Last Month</p>
+                                            <div class="count_summary_wrap">
+                                                <span class="count_summary_current">
+                                                    <span class="count_intext">1,200.8</span>
+                                                    <span class="count_inlabel">Sum</span>
+                                                </span>
+                                                <span class="count_summary_part">/</span>
+                                                <span class="count_summary_length">
+                                                    <span class="count_intext">1,800.5</span>
+                                                    <span class="count_inlabel">Total</span>
+                                                </span>
                                             </div>
-                                            <div class="get_price_copy">MTM NOV. Compared to last NOV.</div>
                                         </div>
-                                    </div>
+                                    </a>
+                                    <!-- // 221202 변경 -->
                                 </div>
-                                <div class="chart_summary_content_cols">
+                                <!-- 221202 변경 -->
+                                <div class="chart_summary_content_cols align_type2">
                                     <!-- chart 영역 -->
                                     <div class="chart_render">
                                         <img src="./images/temp_graph_03.png" alt="">
@@ -488,6 +495,7 @@
                                     </div>
                                     <!-- // chart 영역 -->
                                 </div>
+                                <!-- // 221202 변경 -->
                             </div>
                         </div>
                         <div class="card_vitem box_render">
@@ -497,18 +505,15 @@
                                         <p class="chart_summary_title">MH</p>
                                         <span class="chart_summary_title_sub">FTE</span>
                                     </div>
-                                    <div class="chart_summary_sub_group">
-                                        <div class="summary_sub_item">
-                                           <p class="summary_main_value">280</p>
-                                           <p class="summary_main_value_guide color_red">Nov-01</p>
+                                    <!-- 221202 변경 -->
+                                    <a href="#" class="summary_main_item type4">
+                                        <div class="summary_main_ico"></div>
+                                        <div class="summary_main_tail_group">
+                                            <p class="summary_main_value">280</p>
+                                            <p class="summary_main_value_guide color_red">Nov-01</p>
                                         </div>
-                                        <div class="summary_sub_item">
-                                           <p class="summary_sub_value">20</p>
-                                           <!-- 221130 변경 -->
-                                           <div class="summary_main_value_guide">DTD <span class="color_red">Nov-01</span> Compare to <span class="color_red">Oct-31</span></div>
-                                           <!-- // 221130 변경 -->
-                                        </div>
-                                    </div>
+                                    </a>
+                                    <!-- // 221202 변경 -->
                                 </div>
                                 <div class="chart_summary_content_cols">
                                     <!-- chart 영역 -->
