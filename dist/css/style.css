@@ -385,6 +385,14 @@ textarea {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
 }
 
+.box_pop_render {
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #d6e2e8;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+  padding: 30px 35px;
+}
+
 .card_long {
   margin: 6px;
   flex: 1;
@@ -468,7 +476,6 @@ textarea {
 .tail_menu_list {
   padding: 5px 10px;
 }
-
 .box_title_row {
   padding: 30px 25px 25px;
   font-size: 0;
@@ -1096,6 +1103,14 @@ textarea {
 .data_thead_tb th:last-of-type {
   border-right: 0;
 }
+.not_fixed {
+  table-layout: auto;
+}
+.not_fixed th > *, .not_fixed td > * {
+  max-width: 100%;
+  display: inline-block;
+  word-break: break-all;
+}
 
 .th_text {
   font-size: 16px;
@@ -1334,10 +1349,12 @@ textarea {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  margin-left: -10px;
 }
 .get_value_group_wrap .get_value_group {
   margin-right: 10px;
   padding: 0;
+  margin-left: 0;
 }
 .get_value_group_wrap .get_value_group:last-of-type {
   margin-right: 0;
@@ -1361,6 +1378,7 @@ textarea {
   display: inline-flex;
   justify-content: center;
   box-sizing: border-box;
+  margin-left: -10px;
 }
 .get_value_group.type2 .get_value_cols {
   margin-right: 7px;
@@ -1394,6 +1412,7 @@ textarea {
 }
 .get_value.mintype2 {
   min-width: 46px;
+  text-align: right;
 }
 .get_value.mintype3 {
   min-width: 25px;

@@ -7,6 +7,7 @@
     &.type2{min-height:calc(100vh - 97px)}
 }
 .box_render{border-radius: 10px;background:#fff;border:1px solid #d6e2e8;box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);}
+.box_pop_render{border-radius: 10px;background:#fff;border:1px solid #d6e2e8;box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);padding:30px 35px;}
 .card_long{
     margin: 6px;
     flex:1;
@@ -29,9 +30,57 @@
         padding:28px 50px;
     }
 }
+.data_tail_spec{
+    &:last-of-type{}
+}
+.tail_vitem{}
+.tail_label_row{
+}
+.tail_label{}
+.tail_cont_row{}
+.tail_cont{
+    &.emp{}
+}
+.cont_keyvalue_item{
+    &:last-of-type{}
+}
+.cont_key{}
+.cont_value{}
+
+.indent_para_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.indent_bullet{}
+.indent_para_cols{}
+.indent_para{}
+
+
 .card_chart_render_cols{flex:1;min-width:0;padding:30px 35px;}
 
-.tail_menu_list{padding:5px 10px;}
+.tail_menu_list{padding:5px 10px;
+    > li{}
+}
+.tail_menu{
+    &:before,
+    &:after{}
+    &:before{}
+    &:after{}
+    &.ico_01{
+        &:before{}
+    }
+    &.ico_02{
+        &:before{}
+    }
+    &.ico_03{
+        &:before{}
+    }
+    &.ico_04{
+        &:before{}
+    }
+}
+.tail_menu_text{}
 
 .box_title_row{padding:30px 25px 25px;font-size:0;line-height:0;}
 .box_title{
@@ -219,7 +268,14 @@
         border-right:1px solid #e7e7e7;border-bottom:1px solid #e7e7e7;box-sizing:border-box;padding:13px 3px;
         &.ptype2{padding:8px 3px 2px;}
         &:last-of-type{border-right:0;}
+        &.has_th_unit{
+            .th_unit{}
+        }
     }
+}
+.not_fixed{
+    table-layout: auto;
+    th > *,td > *{max-width:100%;display:inline-block;word-break: break-all;}
 }
 .th_text{font-size:16px;color:#000000;line-height:1;font-weight:700;display:inline-block;word-break: break-all;}
 .th_unit{font-size:12px;color:#999999;line-height:1;display:inline-block;
@@ -274,8 +330,62 @@
         &[rowspan]{border-bottom:0;border-top:1px solid #e7e7e7;
         }
         &.nodata_td{}
+        &.has_td_unit{
+            .get_rank_g{}
+        }
+        &.has_td_grape{
+            .bar_grape_zone{}
+        }
     }
 }
+.data_table_wrap{
+
+}
+.data_table{
+    thead th{
+        &.type2{
+            .th_text{}
+        }
+        &.has_th_unit{
+            .th_unit{}
+        }
+        .th_unit{}
+        .th_text{}
+        &:last-of-type{}
+    }
+    tbody td{
+        &.type2{
+            .td_text{}
+        }
+        &.has_td_unit{
+            .td_unit{}
+        }
+        .td_data_text{}
+    }
+}
+.value_inline_group{
+    &.type2{
+        .value_inline_cols{
+            &:last-of-type{}
+        }
+        .value_inline_current{}
+        .value_inline_part{}
+        .value_inline_length{}
+        .value_inline_else{}
+    }
+}
+.value_inline_cols{
+    &:last-of-type{}
+}
+.value_inline_current{}
+.value_inline_part{}
+.value_inline_length{}
+.value_inline_else{}
+
+.bar_grape_zone{}
+.bar_grape_bg{}
+.bar_grape_current{}
+
 .nodata_para{font-size:16px;color:#999;}
 .td_text{display:inline-block;font-size:13px;color:#333333;line-height:1;word-break: break-all;position:relative;z-index:1;}
 .td_main_item{text-align: left;display:flex;font-size:0;line-height:0;padding:0 5px;}
@@ -307,8 +417,8 @@
 .invalue_unit{font-size:12px;}
 
 .get_value_group_wrap{
-    display:inline-flex;align-items: center;justify-content: center;
-    .get_value_group{margin-right:10px;padding:0;
+    display:inline-flex;align-items: center;justify-content: center;margin-left:-10px;
+    .get_value_group{margin-right:10px;padding:0;margin-left:0;
         &:last-of-type{margin-right:0;}
         &:after{display:none !important;}
     }
@@ -317,7 +427,7 @@
     }
 }
 .get_value_group{
-    display:inline-flex;justify-content:center;box-sizing:border-box;
+    display:inline-flex;justify-content:center;box-sizing:border-box;margin-left:-10px;
     &.type2{
         .get_value_cols{margin-right:7px;}
     }
@@ -330,7 +440,7 @@
     &:last-of-type{margin-right:0 !important;}
 }
 .get_value{display:inline-block;font-size:15px;color:#4e4e4e;line-height:1;
-    &.mintype2{min-width:46px;}
+    &.mintype2{min-width:46px;text-align: right;}
     &.mintype3{min-width:25px;text-align: right;}
 }
 .get_rank_g{display:inline-flex;align-items: center;position:relative;
@@ -345,6 +455,18 @@
     &.down{}
     &.up{background-position:0 100%;}
 }
+
+.data_list_table_wrap{}
+.data_list_table{}
+.data_list_table thead th{}
+.data_list_table thead th:last-of-type{}
+.data_list_table tbody td{}
+.data_list_table tbody td:last-of-type{}
+.data_list_table tbody tr.nodata_tr{}
+.data_list_table tbody tr.nodata_td{}
+.data_list_table tbody tr.nodata_td .nodata_para{}
+.data_thtext{}
+.data_tdtext{}
 
 .card_vitem{
     margin-bottom:10px;padding:17px 24px;flex:1;display:flex;align-items:center;

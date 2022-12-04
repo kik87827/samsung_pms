@@ -48,7 +48,7 @@ var dataTableFunc = {
     drawCallBack(target){
         var targetObj = document.querySelector(target);
         if(targetObj ===null){return;}
-        var targetObjTr = targetObj.querySelectorAll("tr:not(.nodata_tr)");
+        var targetObjTr = targetObj.querySelectorAll(".data_tbody_tb tr:not(.nodata_tr)");
         var targetObjTrHasRowspan = null;
         var thisBodywrap = targetObj.querySelector(".data_tbody_row");
         var optionRow = parseInt(targetObj.getAttribute("data-row"));
@@ -58,28 +58,28 @@ var dataTableFunc = {
             thisBodywrap.style.maxHeight = (getPosDom.offsetTop-1) + "px";
         }
         if(targetObjTr.length){
+            
             targetObjTr.forEach((element)=>{
+                console.log(element.querySelector("[rowspan]"));
                 if(element.querySelector("[rowspan]") !== null){
                     element.classList.add("has_rowspan");
                 }
                 element.addEventListener("mouseover",(e)=>{
                     let thisTarget = e.currentTarget;
                     let spreadDom = siblings(thisTarget);
-
+                    if(targetObjTrHasRowspan.length === 0){return;}
                     activeReset();
-
-                    thisTarget.classList.add("hover");
+                    //thisTarget.classList.add("hover");
                     spreadDom.forEach((spdom)=>{
                         if(thisTarget.dataset.name == spdom.dataset.name){
                             spdom.classList.add("hover");
                         }
                         activeArray.push(spdom);
                     });
-
                     activeArray.push(thisTarget);
                 });
             });
-            targetObjTrHasRowspan = targetObj.querySelectorAll(".has_rowspan");
+            targetObjTrHasRowspan = targetObj.querySelectorAll("tbody .has_rowspan");
             if(targetObjTrHasRowspan !== null){
                 targetObjTrHasRowspan.forEach((element,index)=>{
                     let thisElement = element;
