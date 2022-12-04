@@ -3,3 +3,16 @@
     *{color:#eb6242 !important;}
 }
 .btn_guide{display:inline-block;background:#fff;font-size:16px;padding:15px 30px;border:1px solid #ddd;}
+
+
+select.form_select{
+    border:1px solid #ccc;font-size:16px;height: 50px;padding: 0 50px 0 17px;font-family: 'Noto Sans KR';border-radius: 5px;box-sizing: border-box;width:100%;
+    background: #fff url("../images/ico_select.png") no-repeat 100% 50%;line-height: 45px;-webkit-appearance:none;-moz-appearance:none;appearance:none; cursor: pointer;
+    &::-ms-value {background: none; color:#000;}
+    &::-ms-expand {display: none;}
+    &::-ms-value {
+        background: none; 
+        color:#000;
+    }
+    &:disabled{background-color:#f7f7f7;color:#999999;opacity:1;}
+}

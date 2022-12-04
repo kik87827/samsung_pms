@@ -60,7 +60,6 @@ var dataTableFunc = {
         if(targetObjTr.length){
             
             targetObjTr.forEach((element)=>{
-                console.log(element.querySelector("[rowspan]"));
                 if(element.querySelector("[rowspan]") !== null){
                     element.classList.add("has_rowspan");
                 }
