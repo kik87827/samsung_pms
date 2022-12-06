@@ -4,7 +4,7 @@
     }
 }
 .card_row{display:flex;margin:0 -6px;
-    &.type2{min-height:calc(100vh - 97px)}
+    // &.type2{min-height:calc(100vh - 97px)}
 }
 .box_render{border-radius: 10px;background:#fff;border:1px solid #d6e2e8;box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);}
 .box_pop_render{border-radius: 10px;background:#fff;border:1px solid #d6e2e8;box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);padding:30px 35px;}
