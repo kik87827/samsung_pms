@@ -101,34 +101,72 @@
                                                         <th class="has_th_unit"><span class="th_unit2">DTD</span></th>
                                                     </tr>
                                                 </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td><span class="td_data_text">SB2</span></td>
-                                                        <td><span class="td_data_text">40</span></td>
-                                                        <td><span class="td_data_text">20</span></td>
-                                                        <td><span class="td_data_text">30</span></td>
-                                                        <td><span class="td_data_text">25</span></td>
-                                                        <td class="type2">
-                                                            <div class="value_inline_group">
-                                                                <div class="value_inline_cols">
-                                                                    <span class="value_inline_current">40</span>
-                                                                    <span class="value_inline_part">/</span>
-                                                                    <span class="value_inline_length">100</span>
-                                                                </div>
-                                                                <div class="value_inline_cols">
-                                                                    <span class="value_inline_else">(40%)</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td class="has_td_unit">
-                                                            <div class="get_rank_g has_color">
-                                                                <span class="get_rank_ico up"></span>
-                                                                <span class="get_rank_value type2">10</span>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
                                             </table>
+                                            <div class="data_table_scroll_wrap" id="data_mid_table" data-row="1">
+                                                <table class="data_table">
+                                                    <colgroup>
+                                                        <col style="width:15%" />
+                                                        <col style="width:15%" />
+                                                        <col style="width:15%" />
+                                                        <col style="width:15%" />
+                                                        <col style="width:15%" />
+                                                        <col />
+                                                        <col style="width:10%" />
+                                                    </colgroup>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><span class="td_data_text">SB2</span></td>
+                                                            <td><span class="td_data_text">40</span></td>
+                                                            <td><span class="td_data_text">20</span></td>
+                                                            <td><span class="td_data_text">30</span></td>
+                                                            <td><span class="td_data_text">25</span></td>
+                                                            <td class="type2">
+                                                                <div class="value_inline_group">
+                                                                    <div class="value_inline_cols">
+                                                                        <span class="value_inline_current">40</span>
+                                                                        <span class="value_inline_part">/</span>
+                                                                        <span class="value_inline_length">100</span>
+                                                                    </div>
+                                                                    <div class="value_inline_cols">
+                                                                        <span class="value_inline_else">(40%)</span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="has_td_unit">
+                                                                <div class="get_rank_g has_color">
+                                                                    <span class="get_rank_ico up"></span>
+                                                                    <span class="get_rank_value type2">10</span>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><span class="td_data_text">SB2</span></td>
+                                                            <td><span class="td_data_text">40</span></td>
+                                                            <td><span class="td_data_text">20</span></td>
+                                                            <td><span class="td_data_text">30</span></td>
+                                                            <td><span class="td_data_text">25</span></td>
+                                                            <td class="type2">
+                                                                <div class="value_inline_group">
+                                                                    <div class="value_inline_cols">
+                                                                        <span class="value_inline_current">40</span>
+                                                                        <span class="value_inline_part">/</span>
+                                                                        <span class="value_inline_length">100</span>
+                                                                    </div>
+                                                                    <div class="value_inline_cols">
+                                                                        <span class="value_inline_else">(40%)</span>
+                                                                    </div>
+                                                                </div>
+                                                            </td>
+                                                            <td class="has_td_unit">
+                                                                <div class="get_rank_g has_color">
+                                                                    <span class="get_rank_ico up"></span>
+                                                                    <span class="get_rank_value type2">10</span>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -192,6 +230,7 @@
         window.addEventListener("load",()=>{
            //minHeightCard("#get_data_box");
            dataTableFunc.drawCallBack("#data_table_wbs");
+           dataListTableFunc.drawCallBack("#data_mid_table");
         });
     </script>
 </body>
