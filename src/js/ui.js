@@ -113,7 +113,6 @@ var designTableFunc = {
         if(targetObj.length===0){return;}
         targetObj.forEach((table_element)=>{
             var optionRow = row;
-            console.log(row);
             var getPosDom = table_element.querySelectorAll("tr:not(.nodata_tr)")[optionRow];
             if(getPosDom !== undefined){
                 table_element.style.maxHeight = (getPosDom.offsetTop) + "px";
