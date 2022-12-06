@@ -27,15 +27,19 @@
 .card_main_icon{background:rgba(255,255,255,.1) url("../images/icon_tall.png") no-repeat 50% 50%;width:106px;height:106px;border-radius:100%;margin:25px auto 0;}
 .card_data_cols{flex:1;min-width:0;display:flex;}
 .data_tail_spec_wrap{
-    padding:28px 8px 0;box-sizing: border-box;width:100%;position:relative;overflow:overlay;height:195px;
+    padding:28px 0 0;box-sizing: border-box;width:100%;position:relative;overflow:overlay;height:195px;
     display:flex;
     &.type2{
         padding:28px 30px 0;
     }
+    &.flex_type2{
+        .data_tail_spec{flex:1;min-width:0;}
+        .tail_cont{white-space: normal;}
+    }
     &.htype2{height:175px;}
 }
 .data_tail_spec{
-    flex:1;min-width:0;padding:0 20px;
+    min-width:0;padding:0 30px;
     &:after{display:block;content:'';height:28px;}
     &:last-of-type{}
 }
@@ -59,7 +63,7 @@
     display:flex;align-items:center;
     &:last-of-type{}
 }
-.cont_key{color:#6d6c6c;font-size:14px;flex:0;white-space: nowrap;display:inline-block;}
+.cont_key{color:#6d6c6c;font-size:14px;flex:0;white-space: nowrap;display:inline-block;white-space:nowrap;}
 .cont_value{color:#2d2d2d;font-size:17px;margin-left:5px;font-weight:500;
     &.emp{font-weight:700;}
 }
@@ -105,7 +109,7 @@
 }
 .tail_menu_text{flex:1;min-width:0;display:block;font-size:15px;font-weight:500;color:#333333;line-height:1;}
 
-.box_title_row{padding:30px 25px 20px;font-size:0;line-height:0;}
+.box_title_row{padding:30px 25px 25px;font-size:0;line-height:0;}
 .box_title{
     vertical-align: top;
     &.ico_01:before{background-image:url("../images/ico_title_01.png");width:30px;height:28px;}
