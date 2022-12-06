@@ -101,7 +101,7 @@ a:hover {text-decoration:underline;}
 				</tr>
 				<tr>
 					<td class="no"></td>
-					<td class="link"><a href="popup.html" target="_blank">팝업 샘플</a></td>
+					<td class="link"><a href="popup.html" target="_blank">레이어 팝업 샘플</a></td>
 					<td class="td_url"></td>
 					<td class="work end"></td>
 					<td class="bgo">
@@ -123,6 +123,13 @@ layerPopup.hide({
 });
 </textarea>
 					</td>
+				</tr>
+				<tr>
+					<td class="no"></td>
+					<td class="link type2"><a href="javascript:;" onclick="showPopUp('744','574','window_sample.html','window_sample');">윈도우 팝업 샘플</a></td>
+					<td class="td_url"></td>
+					<td class="work end"></td>
+					<td class="bgo"></td>
 				</tr>
 				<tr class="depth">
 					<td colspan="5">메인</td>
@@ -146,7 +153,7 @@ layerPopup.hide({
 				</tr>
 				<tr>
 					<td class="no"></td>
-					<td class="link"><a href="risk_popup.html" target="_blank">0102_Risk_popup</a></td>
+					<td class="link type2"><a href="javascript:;" onclick="showPopUp('744','574','risk_popup.html','risk_popup');">0102_Risk_popup</a></td>
 					<td class="td_url"></td>
 					<td class="work end"></td>
 					<td class="bgo"></td>
@@ -257,10 +264,12 @@ function chkList(){
 	});
 	$("td.link > a").each(function(){
 		var $this = $(this),
+			$t_onclick = $this.attr("onclick"),
 			$t_href = $this.attr("href");
 		
 		if($this.parent(".link").hasClass("type2")){
-			$this.parent("td").next(".td_url").append('<a href='+$t_href+'>'+$t_href+'</a>');
+			// $this.parent("td").next(".td_url").append('<a href='+$t_href+'>'+$t_href+'</a>');
+			$this.parent("td").next(".td_url").append('<a href='+$t_href+' onclick='+$t_onclick+'>샘플 클릭</a>');
 		}else{
 			$this.parent("td").next(".td_url").append('<a href='+$t_href+' target="_blank">'+$t_href+'</a>');
 		}
@@ -271,6 +280,26 @@ function chkList(){
 	$('.total_n').text(tatal_n);
 	$('.curr_n').text(curr_n);
 	$('.per').text(Math.floor((curr_n/tatal_n)*100) + '%');
+}
+
+function showPopUp(width,height,get_url,get_name) {
+	
+	//창 크기 지정
+	var width = width;
+	var height = height;
+	
+	//pc화면기준 가운데 정렬
+	var left = (window.screen.width / 2) - (width/2);
+	var top = (window.screen.height / 4);
+	
+    	//윈도우 속성 지정
+	var windowStatus = 'width='+width+', height='+height+', left='+left+', top='+top+', scrollbars=yes, status=yes, resizable=yes, titlebar=yes';
+	
+    	//연결하고싶은url
+    	const url = get_url;
+
+	//등록된 url 및 window 속성 기준으로 팝업창을 연다.
+	window.open(get_url,get_name, windowStatus);
 }
 </script>
 </body>

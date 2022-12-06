@@ -1,7 +1,8 @@
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    commonLayout();
+    // commonLayout();
+   
 });
 
 
@@ -11,11 +12,11 @@ function menuRock(item){
     
 }
 
-function commonLayout(){
-    const htmlDocu = document.querySelector("html");
-    const bodyDOM = document.querySelector("body");
-    bodyDOM.style.minWidth = (1920 - getScrollBarWidth()) + "px";
-}
+// function commonLayout(){
+//     const htmlDocu = document.querySelector("html");
+//     const bodyDOM = document.querySelector("body");
+//     bodyDOM.style.minWidth = (1920 - getScrollBarWidth()) + "px";
+// }
 
 function siblings(t) {
     var children = t.parentElement.children;
@@ -104,6 +105,44 @@ var dataTableFunc = {
         }
     }
 }
+
+
+var designTableFunc = {
+    drawCallBack(row){
+        var targetObj = document.querySelectorAll(".design_tbody_table_scroll_wrap");
+        if(targetObj.length===0){return;}
+        targetObj.forEach((table_element)=>{
+            var optionRow = row;
+            console.log(row);
+            var getPosDom = table_element.querySelectorAll("tr:not(.nodata_tr)")[optionRow];
+            if(getPosDom !== undefined){
+                table_element.style.maxHeight = (getPosDom.offsetTop) + "px";
+            }
+        });
+    }
+}
+
+var dataListTableFunc = {
+    drawCallBack(target){
+        var targetObj = document.querySelectorAll(target);
+        if(targetObj.length===0){return;}
+        targetObj.forEach((table_element)=>{
+            var optionRow = table_element.dataset.row;
+            var getPosDom = table_element.querySelectorAll("tr:not(.nodata_tr)")[optionRow];
+            if(getPosDom !== undefined){
+                table_element.style.maxHeight = (getPosDom.offsetTop-1) + "px";
+            }
+        });
+    }
+}
+
+function boxWinHeightFunc(){
+    var box_winpop_render = document.querySelector(".box_winpop_render");
+    if(box_winpop_render !== null){
+        box_winpop_render.style.minHeight = (window.innerHeight - box_winpop_render.offsetTop - 30) + "px";
+    }
+}
+
 
 
 const nextSiblings = (elem) => {

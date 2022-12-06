@@ -1,85 +1,88 @@
 <!DOCTYPE html>
 <html lang="ko">
 @@include('./include/head.html')
-<body class="front_body">
-    <div class="page_wrap">
-		<button type="button" class="btn_guide" id="btn_callLayer">레이어 호출</button>
-		<!-- 레이어팝업 -->
-		<div class="dimlayer_z" id="risk_poppup">
-			<div class="fullpop_dim"></div>
-			<div class="fullpop_item">
-				<div class="fullpop_titlow">
-					<h4 class="fullpop_title">Risk  진행 현황</h4>
-				</div>
-				<div class="fullpop_contlow">
-					<div class="fullpop_contlow_in">
-						<div class="box_pop_render">
-							<!-- data_list_table -->
-							<div class="data_list_table_wrap">
-								<table class="data_list_table">
-									<colgroup>
-										<col style="width:25%" />
-										<col />
-									</colgroup>
-									<thead>
-										<tr>
-											<th><span class="data_thtext">Date</span></th>
-											<th><span class="data_thtext">진행 현황</span></th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td><div class="data_tdtext">Nov.12</div></td>
-											<td class="align_type2"><div class="data_tdtext">실험 지연 7일 예상 (From 11/23 to 11/30)</div></td>
-										</tr>
-										<tr>
-											<td><div class="data_tdtext">Nov.12</div></td>
-											<td class="align_type2"><div class="data_tdtext">실험 관련한 일정 협의</div></td>
-										</tr>
-										<tr>
-											<td><div class="data_tdtext">Nov.12</div></td>
-											<td class="align_type2"><div class="data_tdtext">실험 업체 회의를 진행하여 관련 미팅을 하였으나, 차후 미팅에 관련된 일정을 협의하기로 함</div></td>
-										</tr>
-										<tr>
-											<td><div class="data_tdtext">Oct.31</div></td>
-											<td class="align_type2"><div class="data_tdtext">실험 지연 7일 예상 (From 11/23 to 11/30)</div></td>
-										</tr>
-										<tr>
-											<td><div class="data_tdtext">Oct.15</div></td>
-											<td class="align_type2"><div class="data_tdtext">실험 관련한 일정 협의</div></td>
-										</tr>
-										<!-- <tr class="nodata_tr">
-											<td class="nodata_td" colspan="2"><p class="nodata_para">데이터가 없습니다.</p></td>
-										</tr> -->
-									</tbody>
-								</table>
-							</div>
-							<!-- // data_list_table -->
-						</div>
+<body class="front_window_body">
+    <div class="page_window_wrap">
+		<div class="winpop_tit_row">
+			<h4 class="winpop_title">Risk  진행 현황</h4>
+			<button type="button" class="btn_window_layerclose" onclick="window.close()"><span class="hdtext">닫기</span></button>
+		</div>
+		<div class="winpop_cont_row">
+			<div class="box_winpop_render">
+				<!-- data_list_table -->
+				<div class="data_list_table_wrap">
+					<table class="data_list_table head">
+						<colgroup>
+							<col style="width:25%" />
+							<col />
+						</colgroup>
+						<thead>
+							<tr>
+								<th><span class="data_thtext">Date</span></th>
+								<th><span class="data_thtext">진행 현황</span></th>
+							</tr>
+						</thead>
+					</table>
+					<div class="data_list_body_scroll" data-row="5" id="data_list_body">
+						<table class="data_list_table">
+							<colgroup>
+								<col style="width:25%" />
+								<col />
+							</colgroup>
+							<tbody>
+								<tr>
+									<td><div class="data_tdtext">Nov.12</div></td>
+									<td class="align_type2"><div class="data_tdtext">실험 지연 7일 예상 (From 11/23 to 11/30)</div></td>
+								</tr>
+								<tr>
+									<td><div class="data_tdtext">Nov.12</div></td>
+									<td class="align_type2"><div class="data_tdtext">실험 관련한 일정 협의</div></td>
+								</tr>
+								<tr>
+									<td><div class="data_tdtext">Nov.12</div></td>
+									<td class="align_type2"><div class="data_tdtext">실험 업체 회의를 진행하여 관련 미팅을 하였으나, 차후 미팅에 관련된 일정을 협의하기로 함</div></td>
+								</tr>
+								<tr>
+									<td><div class="data_tdtext">Oct.31</div></td>
+									<td class="align_type2"><div class="data_tdtext">실험 지연 7일 예상 (From 11/23 to 11/30)</div></td>
+								</tr>
+								<tr>
+									<td><div class="data_tdtext">Oct.15</div></td>
+									<td class="align_type2"><div class="data_tdtext">실험 관련한 일정 협의</div></td>
+								</tr>
+								<tr>
+									<td><div class="data_tdtext">Nov.12</div></td>
+									<td class="align_type2"><div class="data_tdtext">실험 관련한 일정 협의</div></td>
+								</tr>
+								<tr>
+									<td><div class="data_tdtext">Nov.12</div></td>
+									<td class="align_type2"><div class="data_tdtext">실험 업체 회의를 진행하여 관련 미팅을 하였으나, 차후 미팅에 관련된 일정을 협의하기로 함</div></td>
+								</tr>
+								<tr>
+									<td><div class="data_tdtext">Oct.31</div></td>
+									<td class="align_type2"><div class="data_tdtext">실험 지연 7일 예상 (From 11/23 to 11/30)</div></td>
+								</tr>
+								<tr>
+									<td><div class="data_tdtext">Oct.15</div></td>
+									<td class="align_type2"><div class="data_tdtext">실험 관련한 일정 협의</div></td>
+								</tr>
+								<!-- <tr class="nodata_tr">
+									<td class="nodata_td" colspan="2"><p class="nodata_para">데이터가 없습니다.</p></td>
+								</tr> -->
+							</tbody>
+						</table>
 					</div>
 				</div>
-				<!-- <div class="btn_fullsubmit_w">
-					<a href="#" class="btn_quadobj dtype2">저장</a>
-					<a href="#" class="btn_quadobj closetrigger">닫기</a>
-				</div> -->
-				<button type="button" class="btn_layerclose"><span class="hdtext">닫기</span></button>
+				<!-- // data_list_table -->
 			</div>
 		</div>
-		<!-- // 레이어팝업 -->
 	</div>
-    @@include('./include/script.html')
+	@@include('./include/script.html')
 	<script>
-		document.querySelector("#btn_callLayer").addEventListener("click",(e)=>{
-			layerPopup.show({
-				target : "#risk_poppup",
-				openCallback(){
-					console.log('callback')
-				}
-			})
-		});
-		var eventObj = document.createEvent('Event');
-		eventObj.initEvent('click', false, true);
-		document.querySelector("#btn_callLayer").dispatchEvent(eventObj);
-	</script>
+        window.addEventListener("load",()=>{
+           boxWinHeightFunc();
+		   dataListTableFunc.drawCallBack("#data_list_body");
+        });
+    </script>
 </body>
 </html>

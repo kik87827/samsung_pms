@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('./include/head.html')
+<body class="front_window_body">
+    <div class="page_window_wrap">
+		<div class="winpop_tit_row">
+			<h4 class="winpop_title">타이틀</h4>
+			<button type="button" class="btn_window_layerclose" onclick="window.close()"><span class="hdtext">닫기</span></button>
+		</div>
+		<div class="winpop_cont_row">
+			<div class="box_winpop_render">
+				내용이 들어갑니다.
+			</div>
+		</div>
+	</div>
+	@@include('./include/script.html')
+	<script>
+        window.addEventListener("load",()=>{
+           boxWinHeightFunc();
+        });
+    </script>
+</body>
+</html>
