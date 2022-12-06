@@ -600,7 +600,7 @@
 .design_thtext,
 .design_tdtext{display:inline-block;font-size:16px;color:#333333;line-height:1;}
 .design_thtext{}
-.design_tdtext{font-weight:500;}
+.design_tdtext{font-weight:500;overflow: hidden; text-overflow: ellipsis; display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;word-break: break-all;}
 .bar_grape_group{}
 .bar_glabel_wrap{display:flex;align-items: center;justify-content: space-between;margin:0 5px 8px;}
 .bar_glabel{display:inline-block;font-size:13px;color:#333333;line-height:1;font-weight:500;}

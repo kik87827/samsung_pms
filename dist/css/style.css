@@ -1995,6 +1995,12 @@ select.form_select:disabled {
 
 .design_tdtext {
   font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
 }
 
 .bar_glabel_wrap {
