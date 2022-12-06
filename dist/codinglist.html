@@ -351,12 +351,10 @@ layerPopup.hide({
 		$(function() {
 			chkList();
 			$(document).on("click", "tr a", function(e) {
-				console.log($(this).parents("tr").find(".ing"))
 				if ($(this).parents("tr").find(".ing,.end").length) {
 					return;
 				}
 				e.preventDefault();
-				console.log(11)
 			});
 		});
 
