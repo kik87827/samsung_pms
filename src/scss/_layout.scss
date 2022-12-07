@@ -2,8 +2,11 @@
 ::-webkit-scrollbar-thumb {background-color: #ccc;border-radius: 10px;background-clip: padding-box;border: 2px solid transparent;}
 ::-webkit-scrollbar-track {background-color: transparent;border-radius: 10px;box-shadow: inset 0px 0px 5px transparent;}
 
-.front_body{position:relative;overflow:hidden;background:#eff5f8;overflow-y:overlay;}
-.page_wrap{width:1920px;height:1080px;margin:0 auto;}
+.front_body{position:relative;overflow:hidden;background:#eff5f8;overflow-y:overlay;
+    &::-webkit-scrollbar {width: 0;background-color:transparent;display:none;}
+}
+.page_wrap{width:1920px;height:1080px;margin:0 auto;
+}
 .header_wrap{display:flex;justify-content:space-between;align-items:center;height:54px;padding:0 24px;border-radius:0 17px 0 17px;box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.13);position:relative;background:#2f82e2 url("../images/bg_header.png") no-repeat 100% 0;
     > *{position:relative;z-index:1;}
 }

@@ -330,6 +330,11 @@ select.form_select:disabled {
   background: #eff5f8;
   overflow-y: overlay;
 }
+.front_body::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+  display: none;
+}
 
 .page_wrap {
   width: 1920px;
