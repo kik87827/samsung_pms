@@ -125,13 +125,15 @@
 }
 .box_title_text{display:inline-block;line-height:1;color:#000;font-size:24px;letter-spacing: -.5px;font-weight:700;}
 .box_title_text_sub{display:inline-block;font-size:14px;color:#333333;font-weight:400;line-height:1;margin-left:3px;}
-.box_content_row{padding:0 25px 30px;}
+
 
 .flex_data_item{display:flex;padding:18px 24px 24px;}
 .flex_data_long{min-width:0;flex:1;}
 .box_item{}
 .box_item .box_title_row{padding:0 0 15px;}
-.box_item .box_content_row{padding:0;}
+.box_item .box_content_row{padding:0;
+    &.type2{padding-top:5px;}
+}
 .flex_data_short{flex:0 0 350px;margin-left:40px;display:flex;align-items: flex-end;}
 
 
@@ -838,3 +840,35 @@
 .btn_window_layerclose:after{transform:rotate(-45deg);-ms-transform:rotate(-45deg);-webkit-transform:rotate(-45deg);}
 
 .winpop_cont_row{padding:30px;}
+
+.data_topitem_group{display:flex;align-items: flex-end;margin:0 0 25px;justify-content: space-between;}
+.data_topitem_cols{
+    .form_select{min-width:160px;}
+    &:last-of-type{}
+    
+}
+.boxtab_list_wrap{}
+.boxtab_list{
+    display:flex;align-items:center;
+    > li{
+        margin-right:4px;
+        &:last-of-type{margin-right:0;}
+        &.active{
+            .boxtab{background:#2382d2;border-color:#2382d2;}
+            .boxtab_intext{color:#fff;position:relative;padding-right:26px;}
+            .boxtab_intext:after{display:block;content:'';width:14px;height:9px;background:url("../images/ico_check.png") no-repeat 0 0;position:absolute;top:4px;right:0;}
+        }
+    }
+}
+.boxtab{border:1px solid #455267;border-radius:100px;min-width:180px;padding:10px 10px 12px;display:flex;align-items:center;justify-content:center;box-sizing: border-box;min-height:40px;}
+.boxtab_intext{display:inline-block;font-size:16px;color:#4e4e4e;line-height:1;}
+.boxtab_intext:after{}
+.data_topguide{font-size:14px;color:#333;line-height:1;display:inline-block;}
+.data_topitem_else_group{
+    display:flex;align-items:flex-end;
+    > *{
+        margin-right:14px;
+        &:last-child{margin-right:0;}
+    }
+    > .data_topguide{white-space: nowrap;padding-bottom:3px;}
+}

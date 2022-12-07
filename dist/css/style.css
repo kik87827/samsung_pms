@@ -767,10 +767,6 @@ select.form_select:disabled {
   margin-left: 3px;
 }
 
-.box_content_row {
-  padding: 0 25px 30px;
-}
-
 .flex_data_item {
   display: flex;
   padding: 18px 24px 24px;
@@ -787,6 +783,9 @@ select.form_select:disabled {
 
 .box_item .box_content_row {
   padding: 0;
+}
+.box_item .box_content_row.type2 {
+  padding-top: 5px;
 }
 
 .flex_data_short {
@@ -2795,5 +2794,86 @@ select.form_select:disabled {
 
 .winpop_cont_row {
   padding: 30px;
+}
+
+.data_topitem_group {
+  display: flex;
+  align-items: flex-end;
+  margin: 0 0 25px;
+  justify-content: space-between;
+}
+
+.data_topitem_cols .form_select {
+  min-width: 160px;
+}
+.boxtab_list {
+  display: flex;
+  align-items: center;
+}
+.boxtab_list > li {
+  margin-right: 4px;
+}
+.boxtab_list > li:last-of-type {
+  margin-right: 0;
+}
+.boxtab_list > li.active .boxtab {
+  background: #2382d2;
+  border-color: #2382d2;
+}
+.boxtab_list > li.active .boxtab_intext {
+  color: #fff;
+  position: relative;
+  padding-right: 26px;
+}
+.boxtab_list > li.active .boxtab_intext:after {
+  display: block;
+  content: "";
+  width: 14px;
+  height: 9px;
+  background: url("../images/ico_check.png") no-repeat 0 0;
+  position: absolute;
+  top: 4px;
+  right: 0;
+}
+
+.boxtab {
+  border: 1px solid #455267;
+  border-radius: 100px;
+  min-width: 180px;
+  padding: 10px 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 40px;
+}
+
+.boxtab_intext {
+  display: inline-block;
+  font-size: 16px;
+  color: #4e4e4e;
+  line-height: 1;
+}
+
+.data_topguide {
+  font-size: 14px;
+  color: #333;
+  line-height: 1;
+  display: inline-block;
+}
+
+.data_topitem_else_group {
+  display: flex;
+  align-items: flex-end;
+}
+.data_topitem_else_group > * {
+  margin-right: 14px;
+}
+.data_topitem_else_group > *:last-child {
+  margin-right: 0;
+}
+.data_topitem_else_group > .data_topguide {
+  white-space: nowrap;
+  padding-bottom: 3px;
 }
 /*# sourceMappingURL=style.css.map */
