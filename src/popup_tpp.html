@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="ko">
 @@include('./include/head.html')
-<body class="front_body">
-    <div class="page_wrap">
-        @@include('./include/header.html')
-        <section class="middle_wrap">
-            내용이 들어갑니다.
-        </section>
-    </div>
-    @@include('./include/script.html')
-    <script>
-        
+<body class="front_window_body">
+    <div class="page_window_wrap">
+		<div class="winpop_tit_row dtype2">
+			<h4 class="winpop_ico_title ico_02"><span class="winpop_intext">TPP</span></h4>
+			<button type="button" class="btn_window_layerclose" onclick="window.close()"><span class="hdtext">닫기</span></button>
+		</div>
+		<div class="winpop_cont_row">
+			<div class="box_winpop_render">
+				<!-- table 영역 -->
+                <div style="display:flex;background:#ccc;color:#000;font-size:16px;display:flex;height:500px;justify-content:center;align-items:center;">
+                    테이블 영역
+                </div>
+                <!-- // table 영역 -->
+			</div>
+		</div>
+	</div>
+	@@include('./include/script.html')
+	<script>
     </script>
 </body>
-</html>      
+</html>

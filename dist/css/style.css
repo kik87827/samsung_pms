@@ -336,6 +336,12 @@ select.form_select:disabled {
   display: none;
 }
 
+.front_window_body::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+  display: none;
+}
+
 .page_wrap {
   width: 1920px;
   height: 1080px;
@@ -2665,9 +2671,7 @@ select.form_select:disabled {
   line-height: 0;
   z-index: 5;
 }
-
-.btn_layerclose:before,
-.btn_layerclose:after {
+.btn_layerclose:before, .btn_layerclose:after {
   width: 32px;
   height: 1px;
   display: block;
@@ -2682,13 +2686,11 @@ select.form_select:disabled {
   -ms-transform: translateZ(0);
   -moz-transform: translateZ(0);
 }
-
 .btn_layerclose:before {
   transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
-
 .btn_layerclose:after {
   transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -2741,6 +2743,25 @@ select.form_select:disabled {
   -webkit-box-shadow: 1px 5px 15px -3px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 1px 5px 15px -3px rgba(0, 0, 0, 0.2);
 }
+.winpop_tit_row.dtype2 {
+  background: #fff;
+  border-radius: 0;
+  border-bottom: 1px solid #cfcfcf;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  padding: 7px 70px;
+  min-height: 60px;
+}
+.winpop_tit_row.dtype2 .btn_window_layerclose {
+  top: 17px;
+  right: 26px;
+}
+.winpop_tit_row.dtype2 .btn_window_layerclose:before, .winpop_tit_row.dtype2 .btn_window_layerclose:after {
+  width: 20px;
+  background: #646464;
+  margin: -0.5px 0 0 -10px;
+}
 
 .winpop_title {
   font-size: 22px;
@@ -2748,6 +2769,33 @@ select.form_select:disabled {
   line-height: 1;
   letter-spacing: 0;
   font-weight: 500;
+}
+
+.winpop_ico_title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.winpop_ico_title:before {
+  display: block;
+  content: "";
+  width: 25px;
+  height: 25px;
+  background: url("../images/ico_popup.png") no-repeat 0 0;
+  flex: 0 0 25px;
+}
+.winpop_ico_title.ico_02:before {
+  background-position: 0 50%;
+}
+.winpop_ico_title.ico_03:before {
+  background-position: 0 100%;
+}
+
+.winpop_intext {
+  color: #000000;
+  font-size: 18px;
+  display: inline-block;
+  margin-left: 3px;
 }
 
 .btn_window_layerclose {
