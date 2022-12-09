@@ -21,5 +21,10 @@
 .toplogo_text{color:#fff;font-family: 'Open Sans SemiBold';font-size:20px;display:inline-block;line-height:1;margin-left:10px;}
 .header_copy{color:#fff;font-family: 'Open Sans SemiBold';font-size:18px;display:inline-block;line-height:1;}
 .middle_wrap{padding:0 24px;}
-.middle_copy_row{padding:15px 0;}
+.middle_copy_row{padding:15px 0;display:flex;align-items: center;justify-content: space-between;}
 .middle_main_copy{font-size: 13px;color: rgb(78, 78, 78);line-height: 1;}
+.middle_copy_else_wrap{display:flex;align-items: center;justify-content: flex-end;}
+.btn_textico_item{
+    display:inline-block;line-height:1;font-size:14px;color:#000000;font-weight:500;padding-right:17px;position:relative;
+    &:after{display:block;content:'';width:8px;height:8px;border-right:1px solid #8a8c8c;border-top:1px solid #8a8c8c;transform: rotate(45deg);position:absolute;top:3px;right:2px;}
+}

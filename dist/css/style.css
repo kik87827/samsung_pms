@@ -404,12 +404,43 @@ select.form_select:disabled {
 
 .middle_copy_row {
   padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .middle_main_copy {
   font-size: 13px;
   color: rgb(78, 78, 78);
   line-height: 1;
+}
+
+.middle_copy_else_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.btn_textico_item {
+  display: inline-block;
+  line-height: 1;
+  font-size: 14px;
+  color: #000000;
+  font-weight: 500;
+  padding-right: 17px;
+  position: relative;
+}
+.btn_textico_item:after {
+  display: block;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-right: 1px solid #8a8c8c;
+  border-top: 1px solid #8a8c8c;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 3px;
+  right: 2px;
 }
 
 .card_layout {
@@ -451,6 +482,9 @@ select.form_select:disabled {
 .card_long {
   margin: 6px;
   flex: 1;
+}
+.card_long.box_render > .box_content_row {
+  padding: 0 25px 30px;
 }
 .card_long.flex_type {
   display: flex;
@@ -1962,6 +1996,11 @@ select.form_select:disabled {
   font-size: 15px;
   color: #333;
 }
+.data_tdtext.emp {
+  font-size: 16px;
+  color: #000;
+  font-weight: 500;
+}
 
 .design_thead_table {
   width: 100%;
@@ -2785,9 +2824,12 @@ select.form_select:disabled {
   flex: 0 0 25px;
 }
 .winpop_ico_title.ico_02:before {
-  background-position: 0 50%;
+  background-position: 0 33.33%;
 }
 .winpop_ico_title.ico_03:before {
+  background-position: 0 66.66%;
+}
+.winpop_ico_title.ico_04:before {
   background-position: 0 100%;
 }
 
@@ -2922,5 +2964,55 @@ select.form_select:disabled {
 .data_topitem_else_group > .data_topguide {
   white-space: nowrap;
   padding-bottom: 3px;
+}
+
+input.props_form {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  overflow: hidden;
+  width: 21px;
+  height: 21px;
+  vertical-align: top;
+  border-radius: 100%;
+  border: 1px solid #ccc;
+  box-sizing: content-box;
+  background: url("../images/ico_formcheck.png") no-repeat 0 0;
+}
+
+input.props_form:checked {
+  background-color: #176bdd;
+  background-position: 0 100%;
+  border-color: #176bdd;
+}
+
+.btn_submit_group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 27px 25px 0;
+}
+.btn_submit_group .btn_submit {
+  margin: 0 2.5px;
+}
+
+.btn_submit {
+  display: inline-block;
+  font-size: 16px;
+  color: #2382d2;
+  font-weight: 500;
+  border: 1px solid #2382d2;
+  border-radius: 8px;
+  box-sizing: border-box;
+  min-width: 160px;
+  padding: 15px 15px 16px;
+  text-align: center;
+  line-height: 1;
+}
+.btn_submit.primary {
+  color: #fff;
+  background: #2382d2;
 }
 /*# sourceMappingURL=style.css.map */
