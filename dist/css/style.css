@@ -2894,6 +2894,8 @@ select.form_select:disabled {
 
 .data_topitem_cols .form_select {
   min-width: 160px;
+  height: 40px;
+  line-height: 38px;
 }
 .boxtab_list {
   display: flex;
