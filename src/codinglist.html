@@ -109,6 +109,9 @@ a:hover {text-decoration:underline;}
 // show 호출
 layerPopup.show({
 	target : "#popup_templete",
+	beforeCallback(){
+		console.log('before')
+	},
 	openCallback(){
 		console.log('callback')
 	}
