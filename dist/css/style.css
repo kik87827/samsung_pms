@@ -2551,6 +2551,8 @@ select.form_select:disabled {
   z-index: 10;
   background: rgba(0, 0, 0, 0);
   transition: 0.5s;
+  max-height: 1080px;
+  max-width: 1920px;
 }
 
 .pop_dim {
