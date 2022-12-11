@@ -16,21 +16,21 @@
 		<!-- 레이어팝업 -->
 		<div class="dimlayer_z" id="popup_templete">
 			<div class="fullpop_dim"></div>
-			<div class="fullpop_item dtype2 wtype3">
+			<div class="fullpop_item dtype2">
 				<div class="fullpop_titlow">
-					<h4 class="laypop_ico_title"><span class="laypop_intext">경쟁사 정보</span></h4>
+					<h4 class="laypop_ico_title"><span class="laypop_intext">타이틀</span></h4>
 				</div>
 				<div class="fullpop_contlow">
 					<div class="fullpop_contlow_in">
 						<div class="box_pop_render">
-							<!-- table 영역 -->
-							<div style="display:flex;background:#ccc;color:#000;font-size:16px;display:flex;height:500px;justify-content:center;align-items:center;">
-								테이블 영역
-							</div>
-							<!-- // table 영역 -->
+							내용이 들어갑니다.
 						</div>
 					</div>
 				</div>
+				<!-- <div class="btn_fullsubmit_w">
+					<a href="#" class="btn_quadobj dtype2">저장</a>
+					<a href="#" class="btn_quadobj closetrigger">닫기</a>
+				</div> -->
 				<button type="button" class="btn_layerclose"><span class="hdtext">닫기</span></button>
 			</div>
 		</div>
@@ -43,9 +43,6 @@
 		document.querySelector("#btn_callLayer").addEventListener("click", (e) => {
 			layerPopup.show({
 				target: "#popup_templete",
-				beforeCallback() {
-					console.log('before')
-				},
 				openCallback() {
 					console.log('callback')
 				}

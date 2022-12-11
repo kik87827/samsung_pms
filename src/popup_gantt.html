@@ -1,42 +1,66 @@
 <!DOCTYPE html>
 <html lang="ko">
 @@include('./include/head.html')
-<body class="front_window_body">
-    <div class="page_window_wrap">
-		<div class="winpop_tit_row dtype2">
-			<h4 class="winpop_ico_title ico_04"><span class="winpop_intext">GANTT</span></h4>
-			<button type="button" class="btn_window_layerclose" onclick="window.close()"><span class="hdtext">닫기</span></button>
-		</div>
-		<div class="winpop_cont_row">
-			<div class="box_winpop_render">
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.<br>
-				내용이 들어갑니다.
+<body class="front_body">
+    <div class="page_wrap">
+		<button type="button" class="btn_guide" id="btn_callLayer">레이어 호출</button>
+		<!-- 레이어팝업 -->
+		<div class="dimlayer_z" id="popup_templete">
+			<div class="fullpop_dim"></div>
+			<div class="fullpop_item dtype2 wtype4">
+				<div class="fullpop_titlow">
+					<h4 class="laypop_ico_title ico_04"><span class="laypop_intext">GANTT</span></h4>
+				</div>
+				<div class="fullpop_contlow">
+					<div class="fullpop_contlow_in">
+						<div class="box_pop_render">
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.<br>
+							내용이 들어갑니다.
+						</div>
+					</div>
+				</div>
+				<button type="button" class="btn_layerclose"><span class="hdtext">닫기</span></button>
 			</div>
 		</div>
+		<!-- // 레이어팝업 -->
 	</div>
-	@@include('./include/script.html')
+    @@include('./include/script.html')
 	<script>
-    </script>
+		document.querySelector("#btn_callLayer").addEventListener("click",(e)=>{
+			layerPopup.show({
+				target : "#popup_templete",
+				beforeCallback(){
+					console.log('before')
+				},
+				openCallback(){
+					console.log('callback')
+				}
+			})
+		});
+		var eventObj = document.createEvent('Event');
+		eventObj.initEvent('click', false, true);
+		document.querySelector("#btn_callLayer").dispatchEvent(eventObj);
+	</script>
 </body>
 </html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('./include/head.html')
+<body class="front_window_body">
+    <div class="page_window_wrap">
+		<div class="winpop_tit_row">
+			<h4 class="winpop_title">Compare Project 선택</h4>
+			<button type="button" class="btn_window_layerclose" onclick="window.close()"><span class="hdtext">닫기</span></button>
+		</div>
+		<div class="winpop_cont_row">
+			<div class="box_winpop_render">
+				<!-- data_list_table -->
+				<div class="data_list_table_wrap">
+					<table class="data_list_table head">
+						<colgroup>
+							<col />
+							<col style="width:20%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th><span class="data_thtext">Project</span></th>
+								<th></th>
+							</tr>
+						</thead>
+					</table>
+					<div class="data_list_body_scroll" data-row="9" id="data_list_body">
+						<table class="data_list_table">
+							<colgroup>
+								<col />
+								<col style="width:20%" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<td class="align_type2"><div class="data_tdtext emp">SB11</div></td>
+									<td>
+										<input type="checkbox" class="props_form">
+									</td>
+								</tr>
+								<tr>
+									<td class="align_type2"><div class="data_tdtext emp">SB12</div></td>
+									<td>
+										<input type="checkbox" class="props_form">
+									</td>
+								</tr>
+								<tr>
+									<td class="align_type2"><div class="data_tdtext emp">SB13</div></td>
+									<td>
+										<input type="checkbox" class="props_form">
+									</td>
+								</tr>
+								<tr>
+									<td class="align_type2"><div class="data_tdtext emp">SB14</div></td>
+									<td>
+										<input type="checkbox" class="props_form">
+									</td>
+								</tr>
+								<tr>
+									<td class="align_type2"><div class="data_tdtext emp">SB15</div></td>
+									<td>
+										<input type="checkbox" class="props_form">
+									</td>
+								</tr>
+								<tr>
+									<td class="align_type2"><div class="data_tdtext emp">SB11</div></td>
+									<td>
+										<input type="checkbox" class="props_form">
+									</td>
+								</tr>
+								<tr>
+									<td class="align_type2"><div class="data_tdtext emp">SB11</div></td>
+									<td>
+										<input type="checkbox" class="props_form">
+									</td>
+								</tr>
+								<tr>
+									<td class="align_type2"><div class="data_tdtext emp">SB11</div></td>
+									<td>
+										<input type="checkbox" class="props_form">
+									</td>
+								</tr>
+								<tr>
+									<td class="align_type2"><div class="data_tdtext emp">SB11</div></td>
+									<td>
+										<input type="checkbox" class="props_form">
+									</td>
+								</tr>
+								<tr>
+									<td class="align_type2"><div class="data_tdtext emp">SB11</div></td>
+									<td>
+										<input type="checkbox" class="props_form">
+									</td>
+								</tr>
+								<tr>
+									<td class="align_type2"><div class="data_tdtext emp">SB11</div></td>
+									<td>
+										<input type="checkbox" class="props_form">
+									</td>
+								</tr>
+								<tr>
+									<td class="align_type2"><div class="data_tdtext emp">SB11</div></td>
+									<td>
+										<input type="checkbox" class="props_form">
+									</td>
+								</tr>
+								<tr>
+									<td class="align_type2"><div class="data_tdtext emp">SB11</div></td>
+									<td>
+										<input type="checkbox" class="props_form">
+									</td>
+								</tr>
+								<tr>
+									<td class="align_type2"><div class="data_tdtext emp">SB11</div></td>
+									<td>
+										<input type="checkbox" class="props_form">
+									</td>
+								</tr>
+								<tr>
+									<td class="align_type2"><div class="data_tdtext emp">SB11</div></td>
+									<td>
+										<input type="checkbox" class="props_form">
+									</td>
+								</tr>
+								<tr>
+									<td class="align_type2"><div class="data_tdtext emp">SB11</div></td>
+									<td>
+										<input type="checkbox" class="props_form">
+									</td>
+								</tr>
+								<tr>
+									<td class="align_type2"><div class="data_tdtext emp">SB11</div></td>
+									<td>
+										<input type="checkbox" class="props_form">
+									</td>
+								</tr>
+								<tr>
+									<td class="align_type2"><div class="data_tdtext emp">SB11</div></td>
+									<td>
+										<input type="checkbox" class="props_form">
+									</td>
+								</tr>
+								<tr>
+									<td class="align_type2"><div class="data_tdtext emp">SB11</div></td>
+									<td>
+										<input type="checkbox" class="props_form">
+									</td>
+								</tr>
+								<tr>
+									<td class="align_type2"><div class="data_tdtext emp">SB11</div></td>
+									<td>
+										<input type="checkbox" class="props_form">
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="btn_submit_group">
+						<a href="javascript:;" class="btn_submit primary">적용</a>
+						<a href="javascript:;" onclick="window.close()" class="btn_submit">취소</a>
+					</div>
+				</div>
+				<!-- // data_list_table -->
+			</div>
+		</div>
+	</div>
+	@@include('./include/script.html')
+	<script>
+        window.addEventListener("load",()=>{
+           boxWinHeightFunc();
+		   dataListTableFunc.drawCallBack("#data_list_body");
+        });
+    </script>
+</body>
+</html>
