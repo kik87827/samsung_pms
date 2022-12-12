@@ -823,9 +823,6 @@ select.form_select:disabled {
 .box_item .box_content_row {
   padding: 0;
 }
-.box_item .box_content_row.type2 {
-  padding-top: 5px;
-}
 
 .flex_data_short {
   flex: 0 0 350px;
