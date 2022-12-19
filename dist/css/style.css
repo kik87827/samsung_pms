@@ -3074,4 +3074,19 @@ input.props_form:checked {
   color: #fff;
   background: #2382d2;
 }
+
+.flex_data_both {
+  display: flex;
+}
+
+.flex_data_cols.define_data {
+  flex: 0 0 51%;
+}
+.flex_data_cols.define_chart {
+  flex: 1;
+  min-width: 0;
+  margin-left: 40px;
+  border: 1px solid #dedede;
+  border-radius: 8px;
+}
 /*# sourceMappingURL=style.css.map */

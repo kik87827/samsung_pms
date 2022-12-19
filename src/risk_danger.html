@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('./include/head.html')
+<body class="front_body">
+    <div class="page_wrap">
+        @@include('./include/header.html')
+        <section class="middle_wrap">
+            <div class="middle_copy_row"><p class="middle_main_copy">PMS Dashboard system에 오신걸 환영합니다</p></div>
+            <div class="card_layout">
+                <div class="card_row">
+                    <div class="card_long box_render">
+                        <div class="box_item">
+                            <div class="box_title_row">
+								<h3 class="box_title"><span class="box_title_text">Risk</span></h3>
+							</div>
+                            <div class="box_content_row type2">
+                                <div class="data_topitem_group">
+                                    <div class="data_topitem_cols">
+                                        <div class="boxtab_list_wrap">
+                                            <ul class="boxtab_list">
+                                                <li><a href="#" class="boxtab"><span class="boxtab_intext">Project별</span></a></li>
+                                                <li><a href="#" class="boxtab"><span class="boxtab_intext">WBS별</span></a></li>
+                                                <li class="active"><a href="#" class="boxtab"><span class="boxtab_intext">위험도</span></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="data_topitem_cols">
+                                        <select class="form_select"><option>Total</option></select>
+                                    </div>
+                                </div>
+                                <div class="flex_data_both">
+                                    <div class="flex_data_cols define_data">
+                                        <!-- table 영역 -->
+                                        <div style="display:flex;background:#ccc;color:#000;font-size:16px;display:flex;height:810px;justify-content:center;align-items:center;">
+                                            테이블 영역
+                                        </div>
+                                        <!-- // table 영역 -->
+                                    </div>
+                                    <div class="flex_data_cols define_chart">
+                                        <div class="boxdata_title_item">
+                                            <p class="boxdata_title_main">RPN</p>
+                                            <p class="boxdata_title_sub">Risk Priority Number</p>
+                                        </div>
+                                        <div class="count_box_flex_wrap">
+                                            <div class="count_box_flex_short"><span class="box_count_vlabel">가<br>능<br>성<br><br>높<br>음</span></div>
+                                            <div class="count_box_flex_contain">
+                                                <div class="count_cardbox_group">
+                                                    <div class="count_cardbox">
+                                                        <div class="count_text_wrap">
+                                                            <span class="count_text_current">3</span>
+                                                            <span class="count_text_part">/</span>
+                                                            <span class="count_text_length">5</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="count_cardbox emp">
+                                                        <div class="count_text_wrap">
+                                                            <span class="count_text_current">3</span>
+                                                            <span class="count_text_part">/</span>
+                                                            <span class="count_text_length">12</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="count_cardbox emp2">
+                                                        <div class="count_text_wrap">
+                                                            <span class="count_text_current">2</span>
+                                                            <span class="count_text_part">/</span>
+                                                            <span class="count_text_length">5</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="count_cardbox">
+                                                        <div class="count_text_wrap">
+                                                            <span class="count_text_current">5</span>
+                                                            <span class="count_text_part">/</span>
+                                                            <span class="count_text_length">12</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                           
+                                                <div class="box_count_hlabel_wrap">
+                                                    <span class="box_count_hlabel">영향도 높음</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    @@include('./include/script.html')
+    <script>
+        
+    </script>
+</body>
+</html>      
