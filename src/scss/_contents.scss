@@ -935,5 +935,39 @@ input.props_form:checked{background-color:#176bdd;background-position:0 100%;bor
 .flex_data_both{display:flex;}
 .flex_data_cols{
     &.define_data{flex:0 0 51%;}
-    &.define_chart{flex:1;min-width:0;margin-left:40px;border:1px solid #dedede;border-radius:8px;}
+    &.define_chart{flex:1;min-width:0;margin-left:40px;border:1px solid #dedede;border-radius:8px;padding:30px;}
 }
+
+.boxdata_title_item{}
+.boxdata_title_main{font-size:28px;color:#333333;font-weight:700;line-height:1;}
+.boxdata_title_sub{font-size:17px;color:#4e4e4e;font-weight:500;line-height:1;margin-top:10px;}
+
+.count_box_flex_wrap{display:flex;margin-top:88px;}
+.count_box_flex_short{flex:0 0 50px;margin-right:13px;}
+.box_count_vlabel{display:block;font-size:19px;font-weight:500;color:#333333;line-height:1;background:#f8f8f8;text-align: center;padding:20px 0;border-radius:10px}
+.count_box_flex_contain{flex:1;min-width:0;}
+.br_half{display:block;height:5px;}
+.count_cardbox_group{display:flex;flex-wrap:wrap;margin:-5px;}
+.count_cardbox{
+    flex:0 0 50%;box-sizing:border-box;width:50%;padding:5px;
+    
+    &.emp{
+        .count_text_wrap{background:#fff9f9;border-color:#edb2b2;}
+        .count_text_current{color:#c00000;}
+        .count_text_part{}
+        .count_text_length{}
+    }
+    &.emp2{
+        .count_text_wrap{background:#fcfeff;border-color:#b1cad4;}
+        .count_text_current{color:#2f82e2;}
+        .count_text_part{}
+        .count_text_length{}
+    }
+}
+.count_text_wrap{font-size:39px;color:#6d6c6c;font-weight:500;background:#fbfbfb;border:1px solid #cbcbcb;border-radius:10px;display:flex;align-items:center;justify-content:center;height:240px;box-sizing: border-box;}
+.count_text_current{color:#4e4e4e;font-weight:500;font-size:50px;display:inline-block;position:relative;top:-2px;}
+.count_text_part{padding:0 5px;font-size:28px;}
+.count_text_length{}
+
+.box_count_hlabel_wrap{display:flex;justify-content: flex-end;margin-top:15px;}
+.box_count_hlabel{display:block;font-size:19px;font-weight:500;color:#333333;line-height:1;background:#f8f8f8;text-align: center;padding:15px 30px;border-radius:10px}
