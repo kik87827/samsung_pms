@@ -28,3 +28,16 @@
     display:inline-block;line-height:1;font-size:14px;color:#000000;font-weight:500;padding-right:17px;position:relative;
     &:after{display:block;content:'';width:8px;height:8px;border-right:1px solid #8a8c8c;border-top:1px solid #8a8c8c;transform: rotate(45deg);position:absolute;top:3px;right:2px;}
 }
+
+.gnb_list_wrap{
+}
+.gnb_list{
+    display:flex;align-items:center;
+    > li{
+        margin-right:36px;
+        &:last-of-type{margin-right:0;}
+    }
+}
+.gnb_one{display:inline-block;color:#fff;font-size:17px;font-weight:500;
+    &:hover{color:#c00000;}
+}

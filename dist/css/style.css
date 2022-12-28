@@ -443,6 +443,27 @@ select.form_select:disabled {
   right: 2px;
 }
 
+.gnb_list {
+  display: flex;
+  align-items: center;
+}
+.gnb_list > li {
+  margin-right: 36px;
+}
+.gnb_list > li:last-of-type {
+  margin-right: 0;
+}
+
+.gnb_one {
+  display: inline-block;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+}
+.gnb_one:hover {
+  color: #c00000;
+}
+
 .card_layout {
   margin: -6px 0 11px;
 }
@@ -1399,6 +1420,33 @@ select.form_select:disabled {
 }
 .th_unit.emp {
   color: #6d6c6c;
+}
+
+.th_value_group.has_layer {
+  padding: 0 34px;
+  position: relative;
+}
+.th_value_group.has_layer:after {
+  display: block;
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-right: 1px solid #4791e5;
+  border-top: 1px solid #4791e5;
+  transform: translateZ(0) rotate(45deg) translateY(-50%);
+  position: absolute;
+  top: 50%;
+  right: 17px;
+  margin-top: -1px;
+}
+.th_value_group .btn_allow {
+  width: 34px;
+  height: 34px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
 }
 
 .th_value_else_group {

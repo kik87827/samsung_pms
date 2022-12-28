@@ -322,6 +322,10 @@
     .th_text{
         &:last-of-type{}
     }
+    &.has_layer{padding:0 34px;position:relative;
+        &:after{display:block;content:'';width:7px;height:7px;border-right:1px solid #4791e5;border-top:1px solid #4791e5;transform: translateZ(0) rotate(45deg) translateY(-50%);position:absolute;top:50%;right:17px;margin-top:-1px;}
+    }
+    .btn_allow{width:34px;height:34px;display:block;position:absolute;top:50%;right:0;transform: translateY(-50%);}
 }
 .th_value_else_group{
     text-align: right;line-height:0;margin-top:3px;
